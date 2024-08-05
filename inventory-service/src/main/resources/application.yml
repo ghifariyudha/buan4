@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: inventory-service
+  datasource:
+    url: jdbc:h2:mem:buan4db-inventory
+    username: root
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
