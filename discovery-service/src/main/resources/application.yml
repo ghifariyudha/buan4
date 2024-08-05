@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: discovery-service
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 5
+  server:
+    enable-self-preservation: true
+    expected-client-renewal-interval-seconds: 5
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8080/eureka
